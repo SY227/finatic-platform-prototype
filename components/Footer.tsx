@@ -11,6 +11,7 @@ export function Footer() {
         <div className="space-y-2">
           <Link href="/tools" className="block hover:text-emerald-700">Tools</Link>
           <Link href="/guides" className="block hover:text-emerald-700">Guides</Link>
+          <Link href="/blog" className="block hover:text-emerald-700">Blog</Link>
           <Link href="/download" className="block hover:text-emerald-700">Download</Link>
         </div>
         <p className="text-xs leading-relaxed">

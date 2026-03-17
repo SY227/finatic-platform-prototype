@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { CtaBanner } from "@/components/CtaBanner";
-import { FeatureCard, GuideCard, TestimonialCard, ToolCard } from "@/components/Cards";
+import { BlogCard, FeatureCard, GuideCard, TestimonialCard, ToolCard } from "@/components/Cards";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { SectionHeading } from "@/components/SectionHeading";
+import { formatBlogDate, getRecentBlogPosts } from "@/lib/blog";
 
 const faqs = [
   {
@@ -23,6 +24,8 @@ const faqs = [
 ];
 
 export default function HomePage() {
+  const featuredPosts = getRecentBlogPosts(2);
+
   return (
     <main>
       <section className="mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 lg:px-8">
@@ -79,6 +82,33 @@ export default function HomePage() {
           <GuideCard href="/guides/emergency-fund" title="How to Build an Emergency Fund" summary="A realistic framework to save your first safety net and protect your plan from surprises." />
           <GuideCard href="/guides/pay-off-debt" title="How to Pay Off Debt Faster" summary="Compare payoff methods, reduce friction, and create a payoff rhythm you can sustain." />
         </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="Blog"
+          title="Fresh financial insights for everyday decisions"
+          description="Read practical breakdowns that help you feel less overwhelmed and more in control."
+        />
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+          {featuredPosts.map((post) => (
+            <BlogCard
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              title={post.title}
+              summary={post.excerpt}
+              category={post.category}
+              date={formatBlogDate(post.publishedAt)}
+              readTime={post.readTime}
+            />
+          ))}
+        </div>
+        <Link
+          href="/blog"
+          className="mt-6 inline-block font-semibold text-emerald-700 hover:text-emerald-800"
+        >
+          Browse all articles →
+        </Link>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
