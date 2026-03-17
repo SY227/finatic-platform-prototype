@@ -4,16 +4,17 @@ import { notFound } from "next/navigation";
 import { CtaBanner } from "@/components/CtaBanner";
 import { formatBlogDate, getAllBlogPosts, getBlogPostBySlug } from "@/lib/blog";
 
-type Params = {
+type Params = Promise<{
   slug: string;
-};
+}>;
 
 export function generateStaticParams() {
   return getAllBlogPosts().map((post) => ({ slug: post.slug }));
 }
 
-export function generateMetadata({ params }: { params: Params }): Metadata {
-  const post = getBlogPostBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getBlogPostBySlug(slug);
 
   if (!post) {
     return {
@@ -27,8 +28,9 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
   };
 }
 
-export default function BlogPostPage({ params }: { params: Params }) {
-  const post = getBlogPostBySlug(params.slug);
+export default async function BlogPostPage({ params }: { params: Params }) {
+  const { slug } = await params;
+  const post = getBlogPostBySlug(slug);
 
   if (!post) {
     notFound();
