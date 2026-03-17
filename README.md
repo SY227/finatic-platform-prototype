@@ -2,19 +2,18 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+Use this exact flow for this repo:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+cd ~/Desktop/finatic-platform-prototype
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000).
+
+> Note: this project is managed with `pnpm` (see `pnpm-lock.yaml`).
+> Running `npm install` may fail on some environments and running commands from `~` will fail because `package.json` is inside this project folder.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
