@@ -30,7 +30,7 @@ export default function HomePage() {
           <p className="text-sm font-semibold uppercase tracking-wide text-emerald-100">Financial progress platform</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">Your goals are possible with the right plan and consistent action.</h1>
           <p className="mt-5 max-w-2xl text-lg text-emerald-50">
-            Finatic v1 helps you turn money stress into a clear path with personalized goal plans, practical tools, and motivation to keep moving.
+            Finatic helps you turn money stress into a clear path with personalized goal plans, practical tools, and motivation to keep moving.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/download" className="rounded-full bg-white px-6 py-3 font-semibold text-emerald-700 hover:bg-slate-100">Download Finatic</Link>
