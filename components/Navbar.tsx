@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import { APP_STORE_URL, NAV_LINKS } from "@/lib/site";
+import { NAV_LINKS } from "@/lib/site";
 
 export function Navbar() {
   return (
@@ -20,15 +19,6 @@ export function Navbar() {
             </Link>
           ))}
         </nav>
-        <Link
-          href={APP_STORE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Download Finatic on the App Store"
-          className="inline-flex rounded-xl transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2"
-        >
-          <Image src="/download/app_download.svg" alt="Download on the App Store" width={140} height={46} />
-        </Link>
       </div>
     </header>
   );
