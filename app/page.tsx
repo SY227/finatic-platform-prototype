@@ -1,9 +1,31 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBanner } from "@/components/CtaBanner";
 import { BlogCard, FeatureCard, GuideCard, TestimonialCard, ToolCard } from "@/components/Cards";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { SectionHeading } from "@/components/SectionHeading";
 import { formatBlogDate, getRecentBlogPosts } from "@/lib/blog";
+import { absoluteUrl } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Financial Planning Tools, Guides, and Money Routines",
+  description:
+    "Use Finatic's free debt payoff and budget planning tools plus practical guides on emergency funds and financial goal planning.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Finatic Financial Planning Tools and Guides",
+    description:
+      "Debt payoff, budgeting, emergency fund, and goal planning resources for practical progress.",
+    url: "https://finatic.app/",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Finatic Financial Planning Tools and Guides",
+    description:
+      "Debt payoff, budgeting, emergency fund, and goal planning resources for practical progress.",
+  },
+};
 
 const faqs = [
   {
@@ -23,11 +45,22 @@ const faqs = [
   },
 ];
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Finatic",
+  url: "https://finatic.app",
+  logo: absoluteUrl("/favicon.ico"),
+  sameAs: ["https://apps.apple.com/us/app/finatic-reach-financial-goals/id6758930999"],
+};
+
 export default function HomePage() {
   const featuredPosts = getRecentBlogPosts(2);
 
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
+
       <section className="mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 lg:px-8">
         <div className="rounded-3xl bg-gradient-to-br from-emerald-700 via-emerald-600 to-cyan-600 p-10 text-white shadow-xl sm:p-14">
           <p className="text-sm font-semibold uppercase tracking-wide text-emerald-100">Financial progress platform</p>
@@ -53,18 +86,24 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Goals" title="Start where your life needs it most" />
+        <SectionHeading eyebrow="Goal clusters" title="Start where your life needs it most" />
         <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {[
-            "Pay off debt",
-            "Build emergency savings",
-            "Budget with confidence",
-            "Plan your next financial step",
-          ].map((goal) => (
-            <article key={goal} className="rounded-2xl border border-slate-200 bg-white p-5 text-slate-700 shadow-sm">
-              <p className="font-semibold text-slate-900">{goal}</p>
-            </article>
-          ))}
+          <article className="rounded-2xl border border-slate-200 bg-white p-5 text-slate-700 shadow-sm">
+            <p className="font-semibold text-slate-900">Debt payoff</p>
+            <Link href="/guides/debt-payoff-guide" className="mt-2 inline-block text-sm font-semibold text-emerald-700">Read debt payoff guide →</Link>
+          </article>
+          <article className="rounded-2xl border border-slate-200 bg-white p-5 text-slate-700 shadow-sm">
+            <p className="font-semibold text-slate-900">Budgeting / cash flow</p>
+            <Link href="/tools/budget-planner" className="mt-2 inline-block text-sm font-semibold text-emerald-700">Use budget planner →</Link>
+          </article>
+          <article className="rounded-2xl border border-slate-200 bg-white p-5 text-slate-700 shadow-sm">
+            <p className="font-semibold text-slate-900">Emergency fund / stability</p>
+            <Link href="/guides/emergency-fund" className="mt-2 inline-block text-sm font-semibold text-emerald-700">Read emergency fund guide →</Link>
+          </article>
+          <article className="rounded-2xl border border-slate-200 bg-white p-5 text-slate-700 shadow-sm">
+            <p className="font-semibold text-slate-900">Goal planning</p>
+            <Link href="/blog/72-hour-money-reset" className="mt-2 inline-block text-sm font-semibold text-emerald-700">Start 30-day money plan →</Link>
+          </article>
         </div>
       </section>
 
@@ -80,7 +119,7 @@ export default function HomePage() {
         <SectionHeading eyebrow="Guides" title="Step-by-step education you can actually use" />
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           <GuideCard href="/guides/emergency-fund" title="How to Build an Emergency Fund" summary="A realistic framework to save your first safety net and protect your plan from surprises." />
-          <GuideCard href="/guides/pay-off-debt" title="How to Pay Off Debt Faster" summary="Compare payoff methods, reduce friction, and create a payoff rhythm you can sustain." />
+          <GuideCard href="/guides/debt-payoff-guide" title="How to Pay Off Debt Faster" summary="Compare payoff methods, reduce friction, and create a payoff rhythm you can sustain." />
         </div>
       </section>
 

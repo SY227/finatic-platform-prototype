@@ -5,8 +5,20 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { formatBlogDate, getAllBlogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Practical money insights and action steps from Finatic.",
+  title: "Personal Finance Blog for Practical Money Decisions",
+  description: "Read practical articles on budgeting, debt payoff, emergency funds, and financial goal planning.",
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Personal Finance Blog for Practical Money Decisions | Finatic",
+    description: "Practical money articles for debt payoff, budgeting, and goal planning.",
+    url: "https://finatic.app/blog",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Personal Finance Blog for Practical Money Decisions | Finatic",
+    description: "Practical money articles for debt payoff, budgeting, and goal planning.",
+  },
 };
 
 export default function BlogPage() {

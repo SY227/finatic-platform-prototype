@@ -29,8 +29,19 @@ export default function DebtPayoffCalculatorPage() {
     return { months, interest: interestPaid };
   }, [balance, apr, monthlyPayment]);
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://finatic.app/" },
+      { "@type": "ListItem", position: 2, name: "Tools", item: "https://finatic.app/tools" },
+      { "@type": "ListItem", position: 3, name: "Debt Payoff Calculator", item: "https://finatic.app/tools/debt-payoff-calculator" }
+    ]
+  };
+
   return (
     <main className="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Debt Payoff Calculator</h1>
       <p className="mt-3 text-slate-600">Use your current balance, APR, and payment amount to estimate your payoff timeline.</p>
 
@@ -50,7 +61,7 @@ export default function DebtPayoffCalculatorPage() {
       </div>
 
       <section className="mt-8 rounded-2xl bg-slate-900 p-6 text-white">
-        <h2 className="text-xl font-semibold">Estimated result</h2>
+        <h2 className="text-xl font-semibold">Estimated payoff timeline and interest</h2>
         {Number.isFinite(result.months) ? (
           <div className="mt-4 space-y-2">
             <p>Estimated payoff time: <span className="font-semibold">{result.months} months</span></p>

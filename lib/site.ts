@@ -3,7 +3,7 @@ export const APP_STORE_URL =
 
 export const NAV_LINKS = [
   { href: "/how-it-works", label: "How It Works" },
-  { href: "/tools", label: "Tools" },
+  { href: "/tools", label: "Calculators & Tools" },
   { href: "/guides", label: "Guides" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },

@@ -17,15 +17,25 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://finatic.app"),
   title: {
-    default: "Finatic | Reach Your Financial Goals",
+    default: "Finatic | Financial Planning Tools and Guides",
     template: "%s | Finatic",
   },
   description:
-    "Finatic helps you make practical progress toward your money goals with personalized plans, tools, and guidance.",
+    "Free debt payoff and budget planning tools, practical guides, and weekly money systems to help you reach financial goals.",
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Finatic",
-    description: "Practical progress for your financial goals.",
+    title: "Finatic | Financial Planning Tools and Guides",
+    description:
+      "Practical debt payoff, budgeting, emergency fund, and goal planning resources.",
     type: "website",
+    url: "https://finatic.app",
+    siteName: "Finatic",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Finatic | Financial Planning Tools and Guides",
+    description:
+      "Practical debt payoff, budgeting, emergency fund, and goal planning resources.",
   },
 };
 

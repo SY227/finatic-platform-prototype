@@ -2,8 +2,20 @@ import type { Metadata } from "next";
 import { CtaBanner } from "@/components/CtaBanner";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: "Learn about Finatic and its mission to make financial progress practical.",
+  title: "About Finatic",
+  description: "Learn about Finatic's mission and approach to practical financial planning and consistent money progress.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Finatic",
+    description: "Finatic helps people make practical financial progress without overwhelm.",
+    url: "https://finatic.app/about",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Finatic",
+    description: "Finatic helps people make practical financial progress without overwhelm.",
+  },
 };
 
 export default function AboutPage() {

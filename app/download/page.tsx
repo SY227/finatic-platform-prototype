@@ -5,8 +5,20 @@ import { APP_STORE_URL } from "@/lib/site";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Download",
-  description: "Download Finatic on the App Store and start reaching your financial goals.",
+  alternates: { canonical: "/download" },
+  openGraph: {
+    title: "Download Finatic iPhone App",
+    description: "Get Finatic on iPhone to turn money goals into practical daily actions.",
+    url: "https://finatic.app/download",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Download Finatic iPhone App",
+    description: "Get Finatic on iPhone to turn money goals into practical daily actions.",
+  },
+  title: "Download Finatic iPhone App",
+  description: "Download the Finatic iPhone app to create a practical daily plan for debt payoff, budgeting, savings, and financial goals.",
 };
 
 const keyBenefits = [

@@ -4,8 +4,20 @@ import { FeatureCard } from "@/components/Cards";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "How It Works",
-  description: "Learn how Finatic helps you set goals, build a plan, and stay consistent.",
+  title: "How Finatic Works: Plan, Act, and Track Progress",
+  description: "Learn Finatic's simple three-step process to set financial goals, create a plan, and maintain weekly momentum.",
+  alternates: { canonical: "/how-it-works" },
+  openGraph: {
+    title: "How Finatic Works: Plan, Act, and Track Progress",
+    description: "A clear workflow for practical and consistent financial progress.",
+    url: "https://finatic.app/how-it-works",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How Finatic Works: Plan, Act, and Track Progress",
+    description: "A clear workflow for practical and consistent financial progress.",
+  },
 };
 
 export default function HowItWorksPage() {

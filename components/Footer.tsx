@@ -9,8 +9,11 @@ export function Footer() {
           <p className="mt-2">Practical progress for your money goals.</p>
         </div>
         <div className="space-y-2">
-          <Link href="/tools" className="block hover:text-emerald-700">Tools</Link>
-          <Link href="/guides" className="block hover:text-emerald-700">Guides</Link>
+          <Link href="/tools/debt-payoff-calculator" className="block hover:text-emerald-700">Debt Payoff Calculator</Link>
+          <Link href="/tools/budget-planner" className="block hover:text-emerald-700">Budget Planner</Link>
+          <Link href="/guides/debt-payoff-guide" className="block hover:text-emerald-700">Debt Payoff Guide</Link>
+          <Link href="/guides/emergency-fund" className="block hover:text-emerald-700">Emergency Fund Guide</Link>
+          <Link href="/guides" className="block hover:text-emerald-700">All Guides</Link>
           <Link href="/blog" className="block hover:text-emerald-700">Blog</Link>
           <Link href="/download" className="block hover:text-emerald-700">Download</Link>
         </div>

@@ -18,9 +18,20 @@ export default function BudgetPlannerPage() {
     return { totalExpenses, remaining, savingsRate };
   }, [income, housing, utilities, food, transport, other]);
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://finatic.app/" },
+      { "@type": "ListItem", position: 2, name: "Tools", item: "https://finatic.app/tools" },
+      { "@type": "ListItem", position: 3, name: "Budget Planner", item: "https://finatic.app/tools/budget-planner" }
+    ]
+  };
+
   return (
     <main className="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Budget Planner</h1>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Free Monthly Budget Planner</h1>
       <p className="mt-3 text-slate-600">Estimate your monthly cash flow and see how much margin you can direct toward goals.</p>
 
       <div className="mt-8 grid gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:grid-cols-2">
@@ -45,7 +56,7 @@ export default function BudgetPlannerPage() {
       </div>
 
       <section className="mt-8 rounded-2xl bg-slate-900 p-6 text-white">
-        <h2 className="text-xl font-semibold">Summary</h2>
+        <h2 className="text-xl font-semibold">Budget Summary</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-3">
           <p>Total expenses: <span className="font-semibold">${summary.totalExpenses.toLocaleString()}</span></p>
           <p>Remaining margin: <span className="font-semibold">${summary.remaining.toLocaleString()}</span></p>
