@@ -26,6 +26,7 @@ export type BlogPost = {
   relatedGuideText: string;
   siblingPostHref: string;
   siblingPostText: string;
+  references?: { label: string; href: string }[];
 };
 
 const BLOG_POSTS: BlogPost[] = [
@@ -510,7 +511,533 @@ const BLOG_POSTS: BlogPost[] = [
     siblingPostText: "Debt snowball vs avalanche for real people",
   },
 
+  {
+    slug: "10-expenses-to-cut-without-wrecking-your-life",
+    title: "10 Expenses to Cut Without Wrecking Your Life",
+    excerpt:
+      "A realistic expense-cutting list that protects quality of life while creating useful monthly margin.",
+    category: "Cash Flow",
+    publishedAt: "2026-03-20",
+    updatedAt: "2026-03-20",
+    readTime: "9 min read",
+    author: "Maya Chen",
+    authorRole: "Fintech content editor",
+    primaryKeyword: "expenses to cut",
+    readerPromise: "You will identify practical cuts that free cash without creating rebound spending.",
+    framework: "Keep, trim, pause, remove",
+    intro: [
+      "Cutting expenses fails when people slash everything at once and burn out in two weeks.",
+      "A better method is to protect the spending that supports your life and trim low-value defaults first.",
+    ],
+    keyTakeaways: [
+      "Target recurring low-value spend before core lifestyle categories.",
+      "Use temporary 30-day pauses to test whether you miss the expense.",
+      "Redirect every dollar cut to one visible goal immediately.",
+    ],
+    sections: [
+      {
+        heading: "Where cuts usually work best",
+        paragraphs: [
+          "Common wins come from subscriptions, convenience fees, delivery overuse, and unplanned impulse shopping.",
+          "These categories often have low emotional cost and high monthly leakage.",
+        ],
+      },
+      {
+        heading: "How to avoid rebound spending",
+        paragraphs: [
+          "Do not remove every comfort category. Keep a small lifestyle budget so your plan remains sustainable.",
+          "If cuts feel punitive, spending often snaps back harder next month.",
+        ],
+      },
+    ],
+    relatedToolHref: "/tools/budget-planner",
+    relatedToolText: "Use the budget planner to model your expense cuts",
+    relatedGuideHref: "/guides/emergency-fund",
+    relatedGuideText: "Direct savings to your emergency fund first",
+    siblingPostHref: "/blog/how-to-find-extra-money-in-your-current-paycheck",
+    siblingPostText: "How to find extra money in your current paycheck",
+    references: [
+      { label: "CFPB: budgeting and spending management resources", href: "https://www.consumerfinance.gov/consumer-tools/budgeting/" }
+    ],
+  },
+  {
+    slug: "how-to-prioritize-debt-savings-and-bills",
+    title: "How to Prioritize Debt, Savings, and Bills",
+    excerpt:
+      "A practical priority order for months when you cannot fully fund every financial goal.",
+    category: "Goal Planning",
+    publishedAt: "2026-03-21",
+    updatedAt: "2026-03-21",
+    readTime: "8 min read",
+    author: "Finatic Editorial Team",
+    authorRole: "Personal finance educators",
+    primaryKeyword: "prioritize debt savings bills",
+    readerPromise: "You will leave with a clear priority stack for tight cash-flow months.",
+    framework: "Protect, stabilize, accelerate",
+    intro: [
+      "When money is tight, unclear priorities create stress and inconsistent decisions.",
+      "A fixed order helps you act quickly without rethinking everything every week.",
+    ],
+    keyTakeaways: [
+      "Protect essentials first, then keep minimum obligations current.",
+      "Maintain a starter emergency buffer while reducing high-interest debt.",
+      "Use surplus months to accelerate your top priority, not all goals equally.",
+    ],
+    sections: [
+      {
+        heading: "Step 1: Protect core bills",
+        paragraphs: [
+          "Housing, food, utilities, transportation, and medication come first.",
+          "Stability in essentials prevents compounding problems.",
+        ],
+      },
+      {
+        heading: "Step 2: Keep debt minimums current",
+        paragraphs: [
+          "Missing minimums can trigger fees and credit damage. Protect your floor before optimization.",
+          "Then direct extra funds by strategy, usually highest APR or smallest balance for momentum.",
+        ],
+      },
+      {
+        heading: "Step 3: Build and maintain a starter buffer",
+        paragraphs: [
+          "A modest savings cushion reduces the risk of new debt when surprises occur.",
+          "Treat this as infrastructure, not optional.",
+        ],
+      },
+    ],
+    relatedToolHref: "/tools/budget-planner",
+    relatedToolText: "Run your monthly priority stack in the budget planner",
+    relatedGuideHref: "/guides/debt-payoff-guide",
+    relatedGuideText: "Use this debt payoff guide for the acceleration phase",
+    siblingPostHref: "/blog/what-to-do-when-your-paycheck-is-already-spoken-for",
+    siblingPostText: "What to do when your paycheck is already spoken for",
+    references: [
+      { label: "CFPB: managing debt and budgeting basics", href: "https://www.consumerfinance.gov/consumer-tools/debt-collection/" }
+    ],
+  },
+  {
+    slug: "how-to-recover-after-an-unexpected-expense",
+    title: "How to Recover After an Unexpected Expense",
+    excerpt:
+      "A simple recovery playbook for getting back on track after a financial surprise.",
+    category: "Emergency Fund",
+    publishedAt: "2026-03-22",
+    updatedAt: "2026-03-22",
+    readTime: "8 min read",
+    author: "Finatic Editorial Team",
+    authorRole: "Personal finance educators",
+    primaryKeyword: "recover after unexpected expense",
+    readerPromise: "You will get a practical 2-week recovery plan that prevents spiral spending.",
+    framework: "Absorb, stabilize, rebuild",
+    intro: [
+      "Unexpected expenses are normal. The goal is not avoiding all shocks; it is recovering quickly.",
+      "Recovery speed matters more than perfect execution.",
+    ],
+    keyTakeaways: [
+      "Pause nonessential goals briefly, but protect core bills.",
+      "Run a short-term reset budget for two weeks.",
+      "Begin emergency fund rebuild immediately after stabilization.",
+    ],
+    sections: [
+      {
+        heading: "Absorb the shock",
+        paragraphs: [
+          "Cover the immediate need with the least damaging source available.",
+          "Then freeze optional spending for 7 to 14 days while you rebalance.",
+        ],
+      },
+      {
+        heading: "Stabilize your next bills",
+        paragraphs: [
+          "List due dates for the next two weeks and sequence payments by risk.",
+          "Avoid late fees and utility disruptions first; optimization comes later.",
+        ],
+      },
+      {
+        heading: "Rebuild confidence and buffer",
+        paragraphs: [
+          "Once urgent obligations are covered, restart emergency savings contributions immediately.",
+          "Even small transfers reduce the chance of repeated shocks.",
+        ],
+      },
+    ],
+    relatedToolHref: "/tools/budget-planner",
+    relatedToolText: "Use the budget planner for your 2-week recovery budget",
+    relatedGuideHref: "/guides/emergency-fund",
+    relatedGuideText: "Follow the emergency fund rebuild steps",
+    siblingPostHref: "/blog/starter-emergency-fund-how-much-is-enough",
+    siblingPostText: "Starter emergency fund: how much is enough?",
+    references: [
+      { label: "FDIC consumer resources on deposit protection", href: "https://www.fdic.gov/resources/deposit-insurance/" }
+    ],
+  },
+  {
+    slug: "how-to-find-extra-money-in-your-current-paycheck",
+    title: "How to Find Extra Money in Your Current Paycheck",
+    excerpt:
+      "A practical cash-flow audit to free money without changing jobs or taking on side work immediately.",
+    category: "Cash Flow",
+    publishedAt: "2026-03-23",
+    updatedAt: "2026-03-23",
+    readTime: "9 min read",
+    author: "Maya Chen",
+    authorRole: "Fintech content editor",
+    primaryKeyword: "find extra money in paycheck",
+    readerPromise: "You will identify realistic monthly margin from your existing income.",
+    framework: "Leak scan, cost swaps, payment timing",
+    intro: [
+      "Many households can unlock meaningful margin by tightening systems, not by earning more immediately.",
+      "A structured paycheck audit often reveals recurring leakage hidden in daily decisions.",
+    ],
+    keyTakeaways: [
+      "Start with recurring charges and convenience fees.",
+      "Use due-date sequencing to reduce fee risk.",
+      "Redirect recovered cash to one goal immediately.",
+    ],
+    sections: [
+      {
+        heading: "Run a recurring-charge audit",
+        paragraphs: [
+          "Review subscriptions, auto-renewals, and service plans. Ask which ones you would repurchase today.",
+          "Cancel or downgrade anything that no longer earns its cost.",
+        ],
+      },
+      {
+        heading: "Trim high-friction spending categories",
+        paragraphs: [
+          "Delivery premiums, convenience purchases, and small impulse spending can add up quickly.",
+          "Set one category cap this month and track impact.",
+        ],
+      },
+    ],
+    relatedToolHref: "/tools/budget-planner",
+    relatedToolText: "Map recovered dollars in the budget planner",
+    relatedGuideHref: "/guides/debt-payoff-guide",
+    relatedGuideText: "Use extra cash to accelerate debt payoff",
+    siblingPostHref: "/blog/10-expenses-to-cut-without-wrecking-your-life",
+    siblingPostText: "10 expenses to cut without wrecking your life",
+  },
+  {
+    slug: "what-to-do-before-you-start-investing",
+    title: "What to Do Before You Start Investing",
+    excerpt:
+      "A practical pre-investing checklist so you build on a stable foundation first.",
+    category: "Goal Planning",
+    publishedAt: "2026-03-24",
+    updatedAt: "2026-03-24",
+    readTime: "8 min read",
+    author: "Finatic Editorial Team",
+    authorRole: "Personal finance educators",
+    primaryKeyword: "what to do before investing",
+    readerPromise: "You will know the core money foundations to set before taking investment risk.",
+    framework: "Stability first checklist",
+    intro: [
+      "Investing can be powerful, but unstable cash flow can force withdrawals at the worst times.",
+      "A stable base reduces stress and supports better long-term decisions.",
+    ],
+    keyTakeaways: [
+      "Protect essentials and eliminate acute cash-flow instability first.",
+      "Build a starter emergency buffer before adding market risk.",
+      "Know your debt profile; high-interest debt may deserve priority.",
+    ],
+    sections: [
+      {
+        heading: "Foundation items to complete first",
+        paragraphs: [
+          "Current bills should be on-time and manageable. High-interest debt should be under a clear payoff plan.",
+          "Emergency savings should cover likely near-term disruptions.",
+        ],
+      },
+      {
+        heading: "Why this sequence matters",
+        paragraphs: [
+          "Without a buffer, normal emergencies can force you to liquidate investments or add expensive debt.",
+          "Foundational stability makes investing more sustainable.",
+        ],
+      },
+    ],
+    relatedToolHref: "/tools/budget-planner",
+    relatedToolText: "Use the budget planner to confirm monthly stability",
+    relatedGuideHref: "/guides/emergency-fund",
+    relatedGuideText: "Strengthen your emergency fund before taking more risk",
+    siblingPostHref: "/blog/how-to-prioritize-debt-savings-and-bills",
+    siblingPostText: "How to prioritize debt, savings, and bills",
+    references: [
+      { label: "Investor.gov: investing basics and risk", href: "https://www.investor.gov/introduction-investing" }
+    ],
+  },
+  {
+    slug: "the-best-first-financial-goal-if-you-feel-behind",
+    title: "The Best First Financial Goal If You Feel Behind",
+    excerpt:
+      "How to choose one high-leverage financial goal when everything feels urgent.",
+    category: "Goal Planning",
+    publishedAt: "2026-03-25",
+    updatedAt: "2026-03-25",
+    readTime: "7 min read",
+    author: "Maya Chen",
+    authorRole: "Fintech content editor",
+    primaryKeyword: "best first financial goal",
+    readerPromise: "You will pick one realistic first goal that improves confidence and momentum quickly.",
+    framework: "Urgency-impact-friction scoring",
+    intro: [
+      "Feeling behind often leads to doing too many things at once and finishing none of them.",
+      "Choosing one first goal creates traction and better decisions.",
+    ],
+    keyTakeaways: [
+      "Score goals by urgency, impact, and friction.",
+      "Pick the goal that stabilizes your next 90 days.",
+      "Small early wins increase follow-through.",
+    ],
+    sections: [
+      {
+        heading: "How to choose your first goal",
+        paragraphs: [
+          "If one missed bill could trigger serious consequences, bill stability may be first.",
+          "If debt interest is compounding quickly, debt payoff might become your top focus.",
+        ],
+      },
+      {
+        heading: "What success looks like",
+        paragraphs: [
+          "A good first goal should be measurable and visible each week.",
+          "Examples: save a starter buffer, reduce one debt balance, or maintain four straight weeks of on-time bills.",
+        ],
+      },
+    ],
+    relatedToolHref: "/tools/budget-planner",
+    relatedToolText: "Use the budget planner to choose your first target",
+    relatedGuideHref: "/guides/debt-payoff-guide",
+    relatedGuideText: "If debt is your top stressor, start here",
+    siblingPostHref: "/blog/how-to-prioritize-debt-savings-and-bills",
+    siblingPostText: "How to prioritize debt, savings, and bills",
+  },
+  {
+    slug: "what-a-realistic-debt-free-plan-looks-like",
+    title: "What a Realistic Debt-Free Plan Looks Like",
+    excerpt:
+      "How to build a debt-free plan you can actually follow through changing life circumstances.",
+    category: "Debt Payoff",
+    publishedAt: "2026-03-26",
+    updatedAt: "2026-03-26",
+    readTime: "9 min read",
+    author: "Finatic Editorial Team",
+    authorRole: "Personal finance educators",
+    primaryKeyword: "realistic debt free plan",
+    readerPromise: "You will leave with a debt plan built for consistency, not fantasy numbers.",
+    framework: "Baseline payment + acceleration triggers + reset protocol",
+    intro: [
+      "Debt freedom is usually a systems result, not a motivation event.",
+      "A realistic plan survives hard months and keeps moving.",
+    ],
+    keyTakeaways: [
+      "Set a baseline payment you can hit in low-energy months.",
+      "Use predefined triggers for raising payments in better months.",
+      "Build a reset protocol for setbacks instead of restarting from zero.",
+    ],
+    sections: [
+      {
+        heading: "Build a stable baseline",
+        paragraphs: [
+          "Your baseline payment should fit your conservative monthly budget, not your best month.",
+          "Consistency over time beats occasional aggressive bursts.",
+        ],
+      },
+      {
+        heading: "Define acceleration triggers",
+        paragraphs: [
+          "Examples include tax refunds, bonus income, or subscription savings.",
+          "Pre-deciding where these dollars go removes decision fatigue.",
+        ],
+      },
+      {
+        heading: "Use a reset protocol for setbacks",
+        paragraphs: [
+          "If a disruption occurs, reduce to baseline, stabilize bills, and resume acceleration as soon as possible.",
+          "Do not interpret disruption as failure.",
+        ],
+      },
+    ],
+    relatedToolHref: "/tools/debt-payoff-calculator",
+    relatedToolText: "Stress-test your debt-free timeline in the calculator",
+    relatedGuideHref: "/guides/debt-payoff-guide",
+    relatedGuideText: "Use the full debt payoff framework",
+    siblingPostHref: "/blog/how-to-pay-off-credit-card-debt-faster",
+    siblingPostText: "How to pay off credit card debt faster",
+  },
+  {
+    slug: "how-to-build-savings-when-motivation-is-low",
+    title: "How to Build Savings When Motivation Is Low",
+    excerpt:
+      "A behavior-first savings setup for weeks when motivation is inconsistent.",
+    category: "Savings Habits",
+    publishedAt: "2026-03-27",
+    updatedAt: "2026-03-27",
+    readTime: "8 min read",
+    author: "Maya Chen",
+    authorRole: "Fintech content editor",
+    primaryKeyword: "build savings when motivation is low",
+    readerPromise: "You will set up automatic savings behavior that works even on low-motivation weeks.",
+    framework: "Automation, friction, and visual progress",
+    intro: [
+      "Motivation is unreliable. Systems are reliable.",
+      "Savings grows fastest when contributions happen with minimal decision load.",
+    ],
+    keyTakeaways: [
+      "Automate small transfers first, then scale up.",
+      "Add friction to spending and reduce friction to saving.",
+      "Track visible milestones for momentum.",
+    ],
+    sections: [
+      {
+        heading: "Automate first",
+        paragraphs: [
+          "Start with a small recurring transfer tied to payday.",
+          "The amount can grow later; consistency matters first.",
+        ],
+      },
+      {
+        heading: "Design for low-energy weeks",
+        paragraphs: [
+          "Use preset rules for windfalls and impulse categories so decisions are pre-made.",
+          "Your system should still work when you are busy or stressed.",
+        ],
+      },
+    ],
+    relatedToolHref: "/tools/budget-planner",
+    relatedToolText: "Identify recurring savings room in the budget planner",
+    relatedGuideHref: "/guides/emergency-fund",
+    relatedGuideText: "Apply savings to your emergency fund stages",
+    siblingPostHref: "/blog/the-simplest-weekly-money-routine",
+    siblingPostText: "The simplest weekly money routine",
+  },
+  {
+    slug: "the-difference-between-being-busy-and-making-money-progress",
+    title: "The Difference Between Being Busy and Making Money Progress",
+    excerpt:
+      "How to separate financial activity from financial outcomes so your effort actually compounds.",
+    category: "Money Habits",
+    publishedAt: "2026-03-28",
+    updatedAt: "2026-03-28",
+    readTime: "8 min read",
+    author: "Finatic Editorial Team",
+    authorRole: "Personal finance educators",
+    primaryKeyword: "busy vs making money progress",
+    readerPromise: "You will know which weekly actions create measurable financial progress.",
+    framework: "Activity vs outcome scorecard",
+    intro: [
+      "Many people are very active with money but still feel stuck.",
+      "Progress usually comes from a few high-impact actions repeated consistently.",
+    ],
+    keyTakeaways: [
+      "Track outcomes, not just effort.",
+      "Use one weekly adjustment tied to your top goal.",
+      "Eliminate low-value financial busywork.",
+    ],
+    sections: [
+      {
+        heading: "Define outcome metrics",
+        paragraphs: [
+          "Examples: debt balance trend, emergency fund balance, or on-time bill streak.",
+          "If a task does not move one of these, treat it as secondary.",
+        ],
+      },
+      {
+        heading: "Replace busywork with leverage",
+        paragraphs: [
+          "Instead of tweaking categories daily, automate transfers and review weekly.",
+          "Leverage actions reduce cognitive load and increase consistency.",
+        ],
+      },
+    ],
+    relatedToolHref: "/tools/budget-planner",
+    relatedToolText: "Use budget outputs as your weekly outcome scoreboard",
+    relatedGuideHref: "/guides/debt-payoff-guide",
+    relatedGuideText: "Use this guide if debt balance trend is your key metric",
+    siblingPostHref: "/blog/the-simplest-weekly-money-routine",
+    siblingPostText: "The simplest weekly money routine",
+  },
+  {
+    slug: "one-month-plan-to-get-financially-organized",
+    title: "A One-Month Plan to Get Financially Organized",
+    excerpt:
+      "A 4-week implementation plan to clean up money systems and build momentum.",
+    category: "Goal Planning",
+    publishedAt: "2026-03-29",
+    updatedAt: "2026-03-29",
+    readTime: "10 min read",
+    author: "Maya Chen",
+    authorRole: "Fintech content editor",
+    primaryKeyword: "one month plan to get financially organized",
+    readerPromise: "You will have a structured 4-week plan that improves clarity, stability, and follow-through.",
+    framework: "Week-by-week system build",
+    intro: [
+      "Financial organization is less about perfect spreadsheets and more about sequencing.",
+      "This one-month plan helps you build a stable baseline quickly.",
+    ],
+    keyTakeaways: [
+      "Week 1: visibility. Week 2: spending control. Week 3: debt/savings structure. Week 4: weekly operating rhythm.",
+      "Progress comes from small repeatable systems.",
+      "You do not need to solve everything in one month to gain real control.",
+    ],
+    sections: [
+      {
+        heading: "Week 1: Build your money dashboard",
+        paragraphs: [
+          "List all accounts, balances, due dates, and recurring charges.",
+          "Create one source of truth for decisions.",
+        ],
+      },
+      {
+        heading: "Week 2: Stabilize cash flow",
+        paragraphs: [
+          "Use a practical budget and cut one to three low-value recurring expenses.",
+          "Redirect freed cash toward your top priority.",
+        ],
+      },
+      {
+        heading: "Week 3 and 4: Implement and automate",
+        paragraphs: [
+          "Set debt/savings transfer rules, then establish a 15-minute weekly check-in.",
+          "Automation plus cadence creates durable progress.",
+        ],
+      },
+    ],
+    relatedToolHref: "/tools/budget-planner",
+    relatedToolText: "Run your monthly baseline in the budget planner",
+    relatedGuideHref: "/guides/emergency-fund",
+    relatedGuideText: "Use emergency fund stages during your month-one setup",
+    siblingPostHref: "/blog/72-hour-money-reset",
+    siblingPostText: "Start with the 72-hour money reset",
+  },
+
+
 ];
+
+
+export type AuthorProfile = {
+  name: string;
+  role: string;
+  bio: string;
+};
+
+const AUTHOR_PROFILES: Record<string, AuthorProfile> = {
+  "Maya Chen": {
+    name: "Maya Chen",
+    role: "Fintech content editor",
+    bio: "Maya writes practical personal finance content focused on budgeting behavior, debt payoff systems, and financial habit design for busy households.",
+  },
+  "Finatic Editorial Team": {
+    name: "Finatic Editorial Team",
+    role: "Personal finance educators",
+    bio: "The Finatic editorial team creates educational content designed to help people make practical weekly money progress with less overwhelm.",
+  },
+};
+
+export function getAuthorProfile(name: string): AuthorProfile | null {
+  return AUTHOR_PROFILES[name] ?? null;
+}
 
 export function getAllBlogPosts() {
   return [...BLOG_POSTS].sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));

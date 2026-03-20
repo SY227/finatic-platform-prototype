@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { CtaBanner } from "@/components/CtaBanner";
-import { BlogPost, formatBlogDate, getAllBlogPosts } from "@/lib/blog";
+import { BlogPost, formatBlogDate, getAllBlogPosts, getAuthorProfile } from "@/lib/blog";
 
 type Props = { post: BlogPost };
 
 export function BlogPostTemplate({ post }: Props) {
   const related = getAllBlogPosts().filter((p) => p.slug !== post.slug).slice(0, 2);
+  const authorProfile = getAuthorProfile(post.author);
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
@@ -69,10 +70,23 @@ export function BlogPostTemplate({ post }: Props) {
         </ul>
       </section>
 
+      {post.references?.length ? (
+        <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 className="text-lg font-semibold text-slate-900">References</h3>
+          <ul className="mt-3 space-y-2 text-sm text-slate-700">
+            {post.references.map((ref) => (
+              <li key={ref.href}>
+                • <a href={ref.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-emerald-700 hover:text-emerald-800">{ref.label}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
       <section className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6">
         <h3 className="text-lg font-semibold text-slate-900">Author and editorial note</h3>
         <p className="mt-2 text-sm text-slate-700">
-          This article was reviewed by {post.author}. Finatic content is educational and intended for general planning support.
+          {authorProfile?.bio ?? `This article was reviewed by ${post.author}.`} Finatic content is educational and intended for general planning support.
           It is not legal, tax, investment, or individualized financial advice.
         </p>
         <Link href="/editorial-policy" className="mt-3 inline-block text-sm font-semibold text-emerald-700 hover:text-emerald-800">

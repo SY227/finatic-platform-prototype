@@ -31,3 +31,7 @@ Every post must include links to:
 - download CTA (`/download`)
 
 Template already renders these from fields in `lib/blog.ts`.
+
+
+## Current baseline topic set
+The repository now includes the 20 planned foundational topics. Add future posts by extending adjacent intents or updating existing evergreen posts with improved examples and references.

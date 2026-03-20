@@ -92,7 +92,18 @@ export default function DebtPayoffGuide() {
 
       <section className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6 text-sm text-slate-700">
         <p><strong>Educational note:</strong> This guide provides general educational information and is not individualized legal, tax, credit counseling, or investment advice.</p>
-        <p className="mt-2"><strong>Reference:</strong> Consumer Financial Protection Bureau guidance on debt collection and repayment rights can provide additional context for debt management decisions.</p>
+        <p className="mt-2">
+          <strong>Reference:</strong>{" "}
+          <a
+            href="https://www.consumerfinance.gov/consumer-tools/debt-collection/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-emerald-700 hover:text-emerald-800"
+          >
+            Consumer Financial Protection Bureau debt resources
+          </a>
+          .
+        </p>
       </section>
 
       <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">

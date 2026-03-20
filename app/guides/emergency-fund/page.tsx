@@ -91,7 +91,27 @@ export default function EmergencyFundGuide() {
 
       <section className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6 text-sm text-slate-700">
         <p><strong>Educational note:</strong> This guide is educational only and does not provide legal, tax, investment, or individualized financial advice.</p>
-        <p className="mt-2"><strong>References:</strong> FDIC consumer guidance on deposit insurance and CFPB financial education materials for household money management.</p>
+        <p className="mt-2">
+          <strong>References:</strong>{" "}
+          <a
+            href="https://www.fdic.gov/resources/deposit-insurance/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-emerald-700 hover:text-emerald-800"
+          >
+            FDIC deposit insurance resources
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://www.consumerfinance.gov/consumer-tools/budgeting/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-emerald-700 hover:text-emerald-800"
+          >
+            CFPB budgeting resources
+          </a>
+          .
+        </p>
       </section>
 
       <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
