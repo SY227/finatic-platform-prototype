@@ -32,11 +32,6 @@ export default function BlogPage() {
         description="Each post is built around one practical framework you can apply this week."
       />
 
-      <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <p className="text-sm text-slate-700">
-          Editorial standard: one clear reader promise, one practical framework, and direct links to tools/guides so reading turns into action.
-        </p>
-      </section>
 
       <div className="mt-8 grid gap-4 md:grid-cols-2">
         {posts.map((post) => (
