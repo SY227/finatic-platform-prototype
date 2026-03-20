@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/guides/emergency-fund",
     "/blog",
     "/about",
+    "/editorial-policy",
     "/download",
   ];
 

@@ -13,8 +13,8 @@ export function Footer() {
           <Link href="/tools/budget-planner" className="block hover:text-emerald-700">Budget Planner</Link>
           <Link href="/guides/debt-payoff-guide" className="block hover:text-emerald-700">Debt Payoff Guide</Link>
           <Link href="/guides/emergency-fund" className="block hover:text-emerald-700">Emergency Fund Guide</Link>
-          <Link href="/guides" className="block hover:text-emerald-700">All Guides</Link>
           <Link href="/blog" className="block hover:text-emerald-700">Blog</Link>
+          <Link href="/editorial-policy" className="block hover:text-emerald-700">Editorial Policy</Link>
           <Link href="/download" className="block hover:text-emerald-700">Download</Link>
         </div>
         <p className="text-xs leading-relaxed">

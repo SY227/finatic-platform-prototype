@@ -153,6 +153,18 @@ export default function DownloadPage() {
         </div>
       </section>
 
+
+      <section className="mx-auto max-w-6xl px-4 pb-10 sm:px-6 lg:px-8">
+        <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-sm text-slate-700">
+          <h2 className="text-lg font-semibold text-slate-900">Privacy, security, and education notes</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5">
+            <li>Finatic is designed for educational planning support and habit-building.</li>
+            <li>It is not a bank, lender, broker, or fiduciary advisor.</li>
+            <li>Use Finatic guidance alongside your own judgment and, when needed, licensed professionals.</li>
+          </ul>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-6 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm lg:grid-cols-2 lg:items-start">
           <div>

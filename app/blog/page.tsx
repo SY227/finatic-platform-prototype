@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog" },
   openGraph: {
     title: "Personal Finance Blog for Practical Money Decisions | Finatic",
-    description: "Practical money articles for debt payoff, budgeting, and goal planning.",
+    description: "Practical money articles for debt payoff, budgeting, emergency fund stability, and goal planning.",
     url: "https://finatic.app/blog",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Personal Finance Blog for Practical Money Decisions | Finatic",
-    description: "Practical money articles for debt payoff, budgeting, and goal planning.",
+    description: "Practical money articles for debt payoff, budgeting, emergency fund stability, and goal planning.",
   },
 };
 
@@ -29,8 +29,14 @@ export default function BlogPage() {
       <SectionHeading
         eyebrow="Finatic Blog"
         title="Money guidance for real life"
-        description="Clear, practical articles to help you reduce stress, make better decisions, and keep financial momentum."
+        description="Each post is built around one practical framework you can apply this week."
       />
+
+      <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <p className="text-sm text-slate-700">
+          Editorial standard: one clear reader promise, one practical framework, and direct links to tools/guides so reading turns into action.
+        </p>
+      </section>
 
       <div className="mt-8 grid gap-4 md:grid-cols-2">
         {posts.map((post) => (
